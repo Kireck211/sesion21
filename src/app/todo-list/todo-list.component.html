@@ -1,0 +1,13 @@
+<div class="main-container">
+  <div class="todo-container">
+    <h1>To Do</h1>
+    <div *ngFor="let todo of todos; let i = index" class="todo-item">
+      <input type="checkbox" />
+      <label><a [routerLink]="'./'+i">{{todo}}</a></label>
+    </div>
+    <div class="new-element">
+      <input type="text" #input (input)="changeTodo($event)" [value]="todo" />
+      <button class="btn btn-outline-dark" (click)="addNewTodo()">Add To Do</button>
+    </div>
+  </div>
+</div>

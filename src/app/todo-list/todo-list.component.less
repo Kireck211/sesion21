@@ -1,0 +1,48 @@
+.main-container {
+  background: url('/assets/background.jpeg');
+  width: 100vw;
+  height: calc(100vh - 56px);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-container {
+  background-color: rgba(255,255,255,0.8);
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 5px;
+  width: 350px;
+
+  .todo-item {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  h1 {
+    margin: 10px 0;
+  }
+
+  input {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.new-element {
+  display: flex;
+  justify-content: space-around;
+  cursor: auto;
+}

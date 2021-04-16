@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './shared/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'sesion21';
+  isLoggedIn: boolean = false;
+
+  constructor(private authService: AuthService) {
+    this.authService.isLoggedIn$.subscribe({
+      next: (bool => this.isLoggedIn = bool)
+    });
+  }
+
+  logout() {
+    this.authService.logout();
+  }
 }
